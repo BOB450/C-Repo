@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int AddNum(float a,float b)
+float AddNum(float a,float b)
 {
    return a + b;
 }
@@ -10,20 +10,20 @@ int main() {
    // printf() displays the string inside quotation
    
 
-      int x;
-      int y;
+      float x;
+      float y;
 
    printf("Type in the first product: ");
-   scanf("%d", &x);
+   scanf("%f", &x);
    
    fflush(stdout); // clear input buffer
    printf("Type in the second product: ");
-  scanf("%d", &y);
+  scanf("%f", &y);
   
    // clear input buffer
-   int z = x + y;
+   float z = x + y;
 
-   printf("%d\n", z);
+   printf("%f\n", z);
    fflush(stdin);
    main();
    
