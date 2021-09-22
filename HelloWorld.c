@@ -12,20 +12,21 @@ int main() {
 
       int x;
       int y;
-      int a;
-      int b;
+
    printf("Type in the first product: ");
    scanf("%d", &x);
-   x = a;
-   fflush(stdin); // clear input buffer
+   
+   fflush(stdout); // clear input buffer
    printf("Type in the second product: ");
   scanf("%d", &y);
-  y = b;
-   fflush(stdin); // clear input buffer
+  
+   // clear input buffer
+   int z = x + y;
+
+   printf("%d\n", z);
+   fflush(stdin);
+   main();
    
-
-   printf("%d\n", AddNum(a,b));
-
    printf("\nPress ENTER key to Continue");  
    getchar(); 
 
