@@ -16,6 +16,7 @@ int main() {
    printf("Type in the first product: ");
    scanf("%f", &x);
    
+   
    fflush(stdout); // clear input buffer
    printf("Type in the second product: ");
   scanf("%f", &y);
