@@ -218,7 +218,7 @@ int selection;
   //  printf("%f\n", t1);
     printf("\n\nThe Effort Distance is: %f", ans1);
 
-    
+
 
      }
      else
@@ -232,7 +232,7 @@ int selection;
 
 //-----------------------------------------------------------------------
 
-  
+  SolveForLevers();
    return 0;
 }
 
