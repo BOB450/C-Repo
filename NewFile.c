@@ -237,13 +237,39 @@ int selection;
 }
 
 
+
+int Radians()
+{
+    fflush(stdin);   
+    float f;
+
+    printf("\n\nDeggrees to Radians");
+
+    printf("\n\n\nEnter Deegrees(With no symbols): ");
+      scanf("%f", &f);
+    fflush(stdout); // clear input buffer   
+     float ans = f*0.0174533;
+
+  //  printf("%f\n", t1);
+    printf("\n\nRadians: %f", ans);
+
+
+    Radians();
+     fflush(stdin);      
+    printf("\nPress ENTER key to Continue");  
+    getchar(); 
+
+   return 0;
+}
+
+
 //-----------------------------------------MAIN-------------------------------------------------
 int main() 
 {
 
     int m;
     printf("\n\n Welcome To The Math Calculator Hub:  ");\
-    printf("\n\n Triangle Area(0) \n Fahrenheit to Celsius(1) \n Solve 2 force levers(2)    ");
+    printf("\n\n Triangle Area(0) \n Fahrenheit to Celsius(1) \n Solve 2 force levers(2) \n Covert Deegrees to Radians(3)    ");
     fflush(stdout); // clear input buffer    
     scanf("%d", &m);
      if(m == 0)
@@ -258,6 +284,11 @@ int main()
      {
         SolveForLevers();
      }
+    if(m == 3)
+     {
+        Radians();
+     }
+
      else
      {
          printf("\n Enter a valid input:  ");
