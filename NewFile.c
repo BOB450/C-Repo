@@ -64,8 +64,16 @@ int fahrenheit()
 
 int SolveForLevers()
 {
+fflush(stdin);   
+int selection;
 
-    fflush(stdin);   
+ printf("\n\n Choose a sovlve type by typing in a index:  ");\
+    printf("\n\n Solve for Force Resistance(0) \n Solve for Distance Resistance(1) \n Solve for Force Effort(2) \n Solve for Distance Effort(3) ");
+    fflush(stdout); // clear input buffer    
+    scanf("%d", &selection);
+     if(selection == 0)
+     {
+            fflush(stdin);   
     float r;
     float e;
     float d1;
@@ -93,17 +101,138 @@ int SolveForLevers()
 
      float ans1;
      ans1 = e * d1;
-     ans1 = ans1 * d2;
+     ans1 = ans1 / d2;
 
   //  printf("%f\n", t1);
     printf("\n\nThe Force Ristance is: %f", ans1);
 
 
-    SolveForLevers();
-     fflush(stdin);      
-    printf("\nPress ENTER key to Continue");  
-    getchar(); 
+     }
+    if(selection == 1)
+     {
+         
+         fflush(stdin);   
+    float r;
+    float e;
+    float d1;
+    float d2;
 
+    printf("\n\n2 Force Lever Calculator");
+
+    printf("\n\n\n Enter Force Effort: ");
+      scanf("%f", &e);
+    fflush(stdout); // clear input buffer   
+
+
+   printf("\n\n\n Enter Force Risistacne : ");
+      scanf("%f", &r);
+    fflush(stdout); // clear input buffer 
+
+      printf("\n\n\n Enter Effort Distance : ");
+      scanf("%f", &d1);
+    fflush(stdout); // clear input buffer 
+
+
+     
+
+     float ans1;
+     ans1 = e * d1;
+     ans1 = ans1 / r;
+
+  //  printf("%f\n", t1);
+    printf("\n\nThe Distance Ristance is: %f", ans1);
+
+
+     }
+    if(selection == 2)
+     {
+        
+    fflush(stdin);   
+    float r;
+    float e;
+    float d1;
+    float d2;
+
+    printf("\n\n2 Force Lever Calculator");
+
+   // printf("\n\n\n Enter Force Effort: ");
+    //  scanf("%f", &e);
+   // fflush(stdout); // clear input buffer   
+
+
+   printf("\n\n\n Enter Force Risistacne : ");
+      scanf("%f", &r);
+    fflush(stdout); // clear input buffer 
+
+      printf("\n\n\n Enter Effort Distance : ");
+      scanf("%f", &d1);
+    fflush(stdout); // clear input buffer 
+
+          printf("\n\n\n Enter ristance Distance : ");
+      scanf("%f", &d2);
+    fflush(stdout); // clear input buffer 
+     
+
+     float ans1;
+     ans1 = r * d2;
+     ans1 = ans1 / d1;
+
+  //  printf("%f\n", t1);
+    printf("\n\nThe Force Effort is: %f", ans1);
+
+
+     }
+     if(selection == 3)
+     {
+
+    fflush(stdin);   
+    float r;
+    float e;
+    float d1;
+    float d2;
+
+    printf("\n\n2 Force Lever Calculator");
+
+    printf("\n\n\n Enter Force Effort: ");
+      scanf("%f", &e);
+    fflush(stdout); // clear input buffer   
+
+
+   printf("\n\n\n Enter Force Risistacne : ");
+      scanf("%f", &r);
+    fflush(stdout); // clear input buffer 
+
+     // printf("\n\n\n Enter Effort Distance : ");
+      //scanf("%f", &d1);
+    //fflush(stdout); // clear input buffer 
+
+          printf("\n\n\n Enter ristance Distance : ");
+      scanf("%f", &d2);
+    fflush(stdout); // clear input buffer 
+     
+
+     float ans1;
+     ans1 = r * d2;
+     ans1 = ans1 / e;
+
+  //  printf("%f\n", t1);
+    printf("\n\nThe Effort Distance is: %f", ans1);
+
+    
+
+     }
+     else
+     {
+         printf("\n Enter a valid input:  ");
+         
+     }
+
+
+
+
+//-----------------------------------------------------------------------
+
+  
    return 0;
 }
 
