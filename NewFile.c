@@ -103,8 +103,11 @@ int selection;
      ans1 = e * d1;
      ans1 = ans1 / d2;
 
+    float ma = d1/ d2;
+
   //  printf("%f\n", t1);
     printf("\n\nThe Force Ristance is: %f", ans1);
+    printf("\n\nThe Mechanical Advantage: %f", ma);
 
 
      }
@@ -139,8 +142,12 @@ int selection;
      ans1 = e * d1;
      ans1 = ans1 / r;
 
+     float ma = r/e;
+
+
   //  printf("%f\n", t1);
     printf("\n\nThe Distance Ristance is: %f", ans1);
+    printf("\n\nThe Mechanical Advantage: %f", ma);
 
 
      }
@@ -177,9 +184,11 @@ int selection;
      ans1 = r * d2;
      ans1 = ans1 / d1;
 
+     float ma = d1 /d2;
+
   //  printf("%f\n", t1);
     printf("\n\nThe Force Effort is: %f", ans1);
-
+    printf("\n\nThe Mechanical Advantage: %f", ma);
 
      }
      if(selection == 3)
@@ -215,8 +224,11 @@ int selection;
      ans1 = r * d2;
      ans1 = ans1 / e;
 
+     float ma = r/e;
+
   //  printf("%f\n", t1);
     printf("\n\nThe Effort Distance is: %f", ans1);
+    printf("\n\nThe Mechanical Advantage: %f", ma);
 
 
 
