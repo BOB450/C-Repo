@@ -60,13 +60,61 @@ int fahrenheit()
 
 
 
+
+
+int SolveForLevers()
+{
+
+    fflush(stdin);   
+    float r;
+    float e;
+    float d1;
+    float d2;
+
+    printf("\n\n2 Force Lever Calculator");
+
+    printf("\n\n\n Enter Force Effort: ");
+      scanf("%f", &e);
+    fflush(stdout); // clear input buffer   
+
+
+  // printf("\n\n\n Enter Force Risistacne : ");
+  //    scanf("%f", &r);
+   // fflush(stdout); // clear input buffer 
+
+      printf("\n\n\n Enter Effort Distance : ");
+      scanf("%f", &d1);
+    fflush(stdout); // clear input buffer 
+
+          printf("\n\n\n Enter ristance Distance : ");
+      scanf("%f", &d2);
+    fflush(stdout); // clear input buffer 
+     
+
+     float ans1;
+     ans1 = e * d1;
+     ans1 = ans1 * d2;
+
+  //  printf("%f\n", t1);
+    printf("\n\nThe Force Ristance is: %f", ans1);
+
+
+    SolveForLevers();
+     fflush(stdin);      
+    printf("\nPress ENTER key to Continue");  
+    getchar(); 
+
+   return 0;
+}
+
+
 //-----------------------------------------MAIN-------------------------------------------------
 int main() 
 {
 
     int m;
     printf("\n\n Welcome To The Math Calculator Hub:  ");\
-    printf("\n\n Triangle Area(0) \n Fahrenheit to Celsius(1)  ");
+    printf("\n\n Triangle Area(0) \n Fahrenheit to Celsius(1) \n Solve 2 force levers(2)    ");
     fflush(stdout); // clear input buffer    
     scanf("%d", &m);
      if(m == 0)
@@ -76,6 +124,10 @@ int main()
     if(m == 1)
      {
          fahrenheit();
+     }
+    if(m == 2)
+     {
+        SolveForLevers();
      }
      else
      {
@@ -87,3 +139,7 @@ int main()
     printf("\nPress ENTER key to Continue");  
     getchar(); 
 }
+
+
+
+
