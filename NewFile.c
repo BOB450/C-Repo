@@ -2,11 +2,9 @@
 #include <string.h>
 
 
-
-
-
 int TriangleArea()
 {
+    fflush(stdin);   
     float b;
     float h;
 
@@ -16,7 +14,7 @@ int TriangleArea()
       scanf("%f", &b);
 
     fflush(stdout); // clear input buffer    
-    printf("\nEnter the base of triagle: ");
+    printf("\nEnter the height of triagle: ");
       scanf("%f", &h);
 
     float t2 =  b * h;
@@ -36,6 +34,8 @@ int TriangleArea()
 
 int fahrenheit()
 {
+
+    fflush(stdin);   
     float f;
 
     printf("\n\nFahrenheit to Celsius Calculator");
