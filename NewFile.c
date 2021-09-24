@@ -353,7 +353,7 @@ int CalPi()
   long int i, n;
  double sum=0.0, ter, pi;
  
- printf("Enter number of terms(Higher will be more accurate): ");
+ printf("\nEnter number of terms(Higher will be more accurate): ");
  scanf("%ld", &n);
 
 //Applying formula lorenze
@@ -364,7 +364,7 @@ int CalPi()
  }
  pi = 4 * sum;
 
- printf("\nPI = %f", pi);
+ printf("\nPI = %.9999g", pi);
  
 CalPi();
 
