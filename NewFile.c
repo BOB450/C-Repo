@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
-
+#include <stdlib.h>
+#include <time.h>
 
 int TriangleArea()
 {
@@ -308,6 +309,41 @@ int Efficency()
 
 }
 
+int Dice()
+{
+  int n;
+  int max;
+  int min;
+  int number;
+
+
+   fflush(stdin);  
+   printf("\n\n Calculate the efficiency of a simple machine.");
+
+    printf("\n\n\n Enter Max Range:  ");
+      scanf("%d", &max);
+    fflush(stdout); // clear input buffer   
+
+
+    printf("\n\n\n Enter Min Range:  ");
+      scanf("%d", &min);
+
+        printf("\n\n\n Enter Number of times to Generate:  ");
+      scanf("%d", &n);
+    fflush(stdout); // clear input buffer   
+
+        srand(time(NULL));
+ 
+    for(int i = 0; i<n; i++)
+    {
+      number = rand() % (max-min+1) + min;
+        printf(" %d",number);
+    }
+  Dice();
+    fflush(stdout); // clear input buffer   
+
+}
+
 
 //-----------------------------------------MAIN-------------------------------------------------
 int main() 
@@ -315,7 +351,7 @@ int main()
 
     int m;
     printf("\n\n Welcome To The Math Calculator Hub:  ");\
-    printf("\n\n Triangle Area(0) \n Fahrenheit to Celsius(1) \n Solve 2 force levers(2) \n Covert Deegrees to Radians(3) \n Solve for Simple Machine Efficiency(4) ");
+    printf("\n\n Triangle Area(0) \n Fahrenheit to Celsius(1) \n Solve 2 force levers(2) \n Covert Deegrees to Radians(3) \n Solve for Simple Machine Efficiency(4) \n Random Number Generator(5) ");
     fflush(stdout); // clear input buffer    
     scanf("%d", &m);
      if(m == 0)
@@ -337,6 +373,10 @@ int main()
     if(m == 4)
      {
         Efficency();
+     }
+     if(m == 5)
+     {
+       Dice();
      }
 
      else
