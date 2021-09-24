@@ -10,11 +10,11 @@ int TriangleArea()
 
     printf("\n\nArea Of Triangle Calculator");
 
-    printf("\n\n\nEnter the base of triagle: ");
+    printf("\n\n\nEnter the base of triangle: ");
       scanf("%f", &b);
 
     fflush(stdout); // clear input buffer    
-    printf("\nEnter the height of triagle: ");
+    printf("\nEnter the height of triangle: ");
       scanf("%f", &h);
 
     float t2 =  b * h;
@@ -40,7 +40,7 @@ int fahrenheit()
 
     printf("\n\nFahrenheit to Celsius Calculator");
 
-    printf("\n\n\nEnter Fahrenhei: ");
+    printf("\n\n\nEnter Fahrenheit: ");
       scanf("%f", &f);
     fflush(stdout); // clear input buffer   
      float ans = (f-32)*5/9;
@@ -67,7 +67,7 @@ int SolveForLevers()
 fflush(stdin);   
 int selection;
 
- printf("\n\n Choose a sovlve type by typing in a index:  ");\
+ printf("\n\n Choose a solve type by typing in a index:  ");\
     printf("\n\n Solve for Force Resistance(0) \n Solve for Distance Resistance(1) \n Solve for Force Effort(2) \n Solve for Distance Effort(3) ");
     fflush(stdout); // clear input buffer    
     scanf("%d", &selection);
@@ -94,7 +94,7 @@ int selection;
       scanf("%f", &d1);
     fflush(stdout); // clear input buffer 
 
-          printf("\n\n\n Enter ristance Distance : ");
+          printf("\n\n\n Enter Resistance Distance : ");
       scanf("%f", &d2);
     fflush(stdout); // clear input buffer 
      
@@ -106,7 +106,7 @@ int selection;
     float ma = d1/ d2;
 
   //  printf("%f\n", t1);
-    printf("\n\nThe Force Ristance is: %f", ans1);
+    printf("\n\nThe Force Resistance is: %f", ans1);
     printf("\n\nThe Mechanical Advantage: %f", ma);
 
 
@@ -127,7 +127,7 @@ int selection;
     fflush(stdout); // clear input buffer   
 
 
-   printf("\n\n\n Enter Force Risistacne : ");
+   printf("\n\n\n Enter Force Resistance : ");
       scanf("%f", &r);
     fflush(stdout); // clear input buffer 
 
@@ -146,7 +146,7 @@ int selection;
 
 
   //  printf("%f\n", t1);
-    printf("\n\nThe Distance Ristance is: %f", ans1);
+    printf("\n\nThe Distance Resistance is: %f", ans1);
     printf("\n\nThe Mechanical Advantage: %f", ma);
 
 
@@ -167,7 +167,7 @@ int selection;
    // fflush(stdout); // clear input buffer   
 
 
-   printf("\n\n\n Enter Force Risistacne : ");
+   printf("\n\n\n Enter Force Resistance : ");
       scanf("%f", &r);
     fflush(stdout); // clear input buffer 
 
@@ -175,7 +175,7 @@ int selection;
       scanf("%f", &d1);
     fflush(stdout); // clear input buffer 
 
-          printf("\n\n\n Enter ristance Distance : ");
+          printf("\n\n\n Enter Resistance Distance : ");
       scanf("%f", &d2);
     fflush(stdout); // clear input buffer 
      
@@ -207,7 +207,7 @@ int selection;
     fflush(stdout); // clear input buffer   
 
 
-   printf("\n\n\n Enter Force Risistacne : ");
+   printf("\n\n\n Enter Force Resistance : ");
       scanf("%f", &r);
     fflush(stdout); // clear input buffer 
 
@@ -215,7 +215,7 @@ int selection;
       //scanf("%f", &d1);
     //fflush(stdout); // clear input buffer 
 
-          printf("\n\n\n Enter ristance Distance : ");
+          printf("\n\n\n Enter Resistance Distance : ");
       scanf("%f", &d2);
     fflush(stdout); // clear input buffer 
      
@@ -255,9 +255,9 @@ int Radians()
     fflush(stdin);   
     float f;
 
-    printf("\n\nDeggrees to Radians");
+    printf("\n\nDegrees to Radians");
 
-    printf("\n\n\nEnter Deegrees(With no symbols): ");
+    printf("\n\n\nEnter Degrees(With no symbols): ");
       scanf("%f", &f);
     fflush(stdout); // clear input buffer   
      float ans = f*0.0174533;
@@ -275,13 +275,47 @@ int Radians()
 }
 
 
+int Efficency()
+{
+
+      fflush(stdin);   
+    float IMA;
+    float AMA;
+
+    printf("\n\n Calculate the efficiency of a simple machine.");
+
+    printf("\n\n\n Enter Ideal Mechanical Advantage ");
+      scanf("%f", &IMA);
+    fflush(stdout); // clear input buffer   
+    
+      printf("\n\n\n Enter Actual Mechanical Advantage ");
+      scanf("%f", &AMA);
+    fflush(stdout); // clear input buffer   
+
+  float eff = AMA/IMA*100;
+  //  printf("%f\n", t1);
+    printf("\n\nSimple Machines Efficiency: %.2f", eff);
+    printf("%%");
+
+
+    Efficency();
+     fflush(stdin);      
+    printf("\nPress ENTER key to Continue");  
+    getchar(); 
+
+   return 0;
+
+
+}
+
+
 //-----------------------------------------MAIN-------------------------------------------------
 int main() 
 {
 
     int m;
     printf("\n\n Welcome To The Math Calculator Hub:  ");\
-    printf("\n\n Triangle Area(0) \n Fahrenheit to Celsius(1) \n Solve 2 force levers(2) \n Covert Deegrees to Radians(3)    ");
+    printf("\n\n Triangle Area(0) \n Fahrenheit to Celsius(1) \n Solve 2 force levers(2) \n Covert Deegrees to Radians(3) \n Solve for Simple Machine Efficiency(4) ");
     fflush(stdout); // clear input buffer    
     scanf("%d", &m);
      if(m == 0)
@@ -299,6 +333,10 @@ int main()
     if(m == 3)
      {
         Radians();
+     }
+    if(m == 4)
+     {
+        Efficency();
      }
 
      else
