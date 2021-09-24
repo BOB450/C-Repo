@@ -2,6 +2,9 @@
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
+#include<conio.h>
+#include<math.h>
+
 
 int TriangleArea()
 {
@@ -345,13 +348,37 @@ int Dice()
 }
 
 
+int CalPi()
+{
+  long int i, n;
+ double sum=0.0, ter, pi;
+ 
+ printf("Enter number of terms(Higher will be more accurate): ");
+ scanf("%ld", &n);
+
+//Applying formula lorenze
+ for(i=0;i< n;i++)
+ {
+  ter = pow(-1, i) / (2*i+1);
+  sum += ter;
+ }
+ pi = 4 * sum;
+
+ printf("\nPI = %f", pi);
+ 
+CalPi();
+
+ return 0;
+}
+
+
 //-----------------------------------------MAIN-------------------------------------------------
 int main() 
 {
 
     int m;
     printf("\n\n Welcome To The Math Calculator Hub:  ");\
-    printf("\n\n Triangle Area(0) \n Fahrenheit to Celsius(1) \n Solve 2 force levers(2) \n Covert Deegrees to Radians(3) \n Solve for Simple Machine Efficiency(4) \n Random Number Generator(5) ");
+    printf("\n\n Triangle Area(0) \n Fahrenheit to Celsius(1) \n Solve 2 force levers(2) \n Covert Deegrees to Radians(3) \n Solve for Simple Machine Efficiency(4) \n Random Number Generator(5) \n Calculate PI To any Digits(6) ");
     fflush(stdout); // clear input buffer    
     scanf("%d", &m);
      if(m == 0)
@@ -377,6 +404,10 @@ int main()
      if(m == 5)
      {
        Dice();
+     }
+    if(m == 6)
+     {
+       CalPi();
      }
 
      else
