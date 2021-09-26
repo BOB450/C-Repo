@@ -371,6 +371,42 @@ CalPi();
  return 0;
 }
 
+int PrimeFinder()
+{
+  int Num, flag = 0, i;
+     fflush(stdin);  
+   printf("\n\n Find if a number is Prime.");
+
+    printf("\n\n\n Enter Number:  ");
+      scanf("%d", &Num);
+
+      for (i = 2; i <= Num / 2; ++i) {
+    // condition for non-prime
+    if (Num % i == 0) {
+      flag = 1;
+      break;
+    }
+  }
+
+    if (Num <=1)
+    {
+      printf("\nThis number is nor prime or composite");
+    } 
+    else
+    {
+      if(flag == 0)
+      {
+        printf("%d is a prime number.", Num);
+      }
+      else
+      {
+        printf("%d is not a prime number.", Num);
+      }
+    }
+  PrimeFinder();
+  return 0;
+}
+
 
 //-----------------------------------------MAIN-------------------------------------------------
 int main() 
@@ -378,7 +414,7 @@ int main()
 
     int m;
     printf("\n\n Welcome To The Math Calculator Hub:  ");\
-    printf("\n\n Triangle Area(0) \n Fahrenheit to Celsius(1) \n Solve 2 force levers(2) \n Covert Deegrees to Radians(3) \n Solve for Simple Machine Efficiency(4) \n Random Number Generator(5) \n Calculate PI To any Digits(6) ");
+    printf("\n\n Triangle Area(0) \n Fahrenheit to Celsius(1) \n Solve 2 force levers(2) \n Covert Deegrees to Radians(3) \n Solve for Simple Machine Efficiency(4) \n Random Number Generator(5) \n Calculate PI To any Digits(6) \n Prime Finder(7) ");
     fflush(stdout); // clear input buffer    
     scanf("%d", &m);
      if(m == 0)
@@ -408,6 +444,10 @@ int main()
     if(m == 6)
      {
        CalPi();
+     }
+     if(m == 7)
+     {
+       PrimeFinder();
      }
 
      else
