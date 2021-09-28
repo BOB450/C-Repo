@@ -410,7 +410,7 @@ int PrimeFinder()
 
 int PrimeInRange()
 {
-  int min,max, n, i,j, flag = 0;
+  int min,max, n, i,j, flag = 0,counter = 0;
   printf("\n\nEnter Min Range: ");
   scanf("%d", &min);
 fflush(stdout); // clear input buffer  
@@ -436,9 +436,12 @@ fflush(stdout); // clear input buffer
  
         // flag = 1 means i is prime
         // and flag = 0 means i is not prime
-        if (flag == 1)
+        if (flag == 1){
             printf("\n%d",i);
+            counter++;
+        }
     }
+    printf("\nThere are %d primes between %d and %d",counter,min,max);
 
   PrimeInRange();
   return 0;
