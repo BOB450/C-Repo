@@ -407,35 +407,43 @@ int PrimeFinder()
   return 0;
 }
 
-/*
+
 int PrimeInRange()
 {
-  int Min,Max,num, flag = 0, i,o;
-     fflush(stdin);  
-   printf("\n\n Is prime.");
+  int min,max, n, i,j, flag = 0;
+  printf("\n\nEnter Min Range: ");
+  scanf("%d", &min);
+fflush(stdout); // clear input buffer  
+  printf("\nEnter Max Range: ");
+  scanf("%d", &max);
 
-    printf("\n\n\n Enter Min Range:  ");
-      scanf("%d", &Min);
-//----------------------------------------------------------
-    for (; i <= Min / 2; ++i) 
-    {
-     
-    // condition for non-prime
-      if (Min % i == 0) 
-     {
-       flag =1;
-       break;
-     }
-
-
-     }
-//---------------------------------
-  
+    for (i = min; i <= max; i++) {
+        // Skip 0 and 1 as they are
+        // neither prime nor composite
+        if (i == 1 || i == 0)
+            continue;
+ 
+        // flag variable to tell
+        // if i is prime or not
+        flag = 1;
+ 
+        for (j = 2; j <= i / 2; ++j) {
+            if (i % j == 0) {
+                flag = 0;
+                break;
+            }
+        }
+ 
+        // flag = 1 means i is prime
+        // and flag = 0 means i is not prime
+        if (flag == 1)
+            printf("\n%d",i);
+    }
 
   PrimeInRange();
   return 0;
 }
-*/
+
 
 int Colats()
 {
@@ -483,7 +491,7 @@ int main()
 
     int m;
     printf("\n\n Welcome To The Math Calculator Hub:  ");\
-    printf("\n\n Triangle Area(0) \n Fahrenheit to Celsius(1) \n Solve 2 force levers(2) \n Covert Deegrees to Radians(3) \n Solve for Simple Machine Efficiency(4) \n Random Number Generator(5) \n Calculate PI To any Digits(6) \n Prime Finder(7)\n  Collatz Conjecture(9) ");
+    printf("\n\n Triangle Area(0) \n Fahrenheit to Celsius(1) \n Solve 2 force levers(2) \n Covert Deegrees to Radians(3) \n Solve for Simple Machine Efficiency(4) \n Random Number Generator(5) \n Calculate PI To any Digits(6) \n Prime Finder(7)\n Find primes in Range(8)\n Collatz Conjecture(9) ");
     fflush(stdout); // clear input buffer    
     scanf("%d", &m);
      if(m == 0)
@@ -520,7 +528,7 @@ int main()
      }
     if(m == 8)
      {
-      // PrimeInRange();
+       PrimeInRange();
      }
          if(m == 9)
      {
