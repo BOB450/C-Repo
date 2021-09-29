@@ -407,6 +407,75 @@ int PrimeFinder()
   return 0;
 }
 
+/*
+int PrimeInRange()
+{
+  int Min,Max,num, flag = 0, i,o;
+     fflush(stdin);  
+   printf("\n\n Is prime.");
+
+    printf("\n\n\n Enter Min Range:  ");
+      scanf("%d", &Min);
+//----------------------------------------------------------
+    for (; i <= Min / 2; ++i) 
+    {
+     
+    // condition for non-prime
+      if (Min % i == 0) 
+     {
+       flag =1;
+       break;
+     }
+
+
+     }
+//---------------------------------
+  
+
+  PrimeInRange();
+  return 0;
+}
+*/
+
+int Colats()
+{
+  int n,i = 0;
+     fflush(stdin);  
+     printf("\n\n Generate a  Collatz Conjecture sequence");
+   printf("\n\n Enter any positive integer staring num:  ");
+
+    //printf("\n\n\n Enter num:  ");
+      scanf("%d", &n);
+    fflush(stdout);
+
+  if(n <= 0)
+  {
+    printf("\n Enter a positive integer");
+    Colats();
+  }
+
+  while(n != 1)
+  {
+    if(n % 2 == 0)
+    {
+      n = n /2;
+      ++i;
+      printf("\n%d",n);
+    }
+    else
+    {
+      n =  n * 3;
+      n =  n + 1;
+      ++i;
+       printf("\n%d",n);
+    }
+  }
+  printf("\n It Took %d Steps",i);
+
+  Colats();
+  return 0;
+}
+
 
 //-----------------------------------------MAIN-------------------------------------------------
 int main() 
@@ -414,7 +483,7 @@ int main()
 
     int m;
     printf("\n\n Welcome To The Math Calculator Hub:  ");\
-    printf("\n\n Triangle Area(0) \n Fahrenheit to Celsius(1) \n Solve 2 force levers(2) \n Covert Deegrees to Radians(3) \n Solve for Simple Machine Efficiency(4) \n Random Number Generator(5) \n Calculate PI To any Digits(6) \n Prime Finder(7) ");
+    printf("\n\n Triangle Area(0) \n Fahrenheit to Celsius(1) \n Solve 2 force levers(2) \n Covert Deegrees to Radians(3) \n Solve for Simple Machine Efficiency(4) \n Random Number Generator(5) \n Calculate PI To any Digits(6) \n Prime Finder(7)\n  Collatz Conjecture(9) ");
     fflush(stdout); // clear input buffer    
     scanf("%d", &m);
      if(m == 0)
@@ -448,6 +517,14 @@ int main()
      if(m == 7)
      {
        PrimeFinder();
+     }
+    if(m == 8)
+     {
+      // PrimeInRange();
+     }
+         if(m == 9)
+     {
+       Colats();
      }
 
      else
