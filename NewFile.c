@@ -417,6 +417,7 @@ fflush(stdout); // clear input buffer
   printf("\nEnter Max Range: ");
   scanf("%d", &max);
 
+
     for (i = min; i <= max; i++) {
         // Skip 0 and 1 as they are
         // neither prime nor composite
@@ -442,6 +443,7 @@ fflush(stdout); // clear input buffer
         }
     }
     printf("\nThere are %d primes between %d and %d",counter,min,max);
+
 
   PrimeInRange();
   return 0;

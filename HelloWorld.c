@@ -1,32 +1,28 @@
 #include <stdio.h>
 #include <string.h>
+#include <time.h>
 
-float AddNum(float a,float b)
-{
-   return a + b;
-}
+
 
 int main() {
    // printf() displays the string inside quotation
    
 
-      float x;
-      float y;
 
-   printf("Type in the first product: ");
-   scanf("%f", &x);
-   
-   
-   fflush(stdout); // clear input buffer
-   printf("Type in the second product: ");
-  scanf("%f", &y);
+   /*
+    time_t rawtime;
+  struct tm * timeinfo;
+
+  time ( &rawtime );
+  timeinfo = localtime ( &rawtime );
+  printf ( "Current local time and date: %s", asctime (timeinfo) );
+  */
+  time_t t = time(NULL);
+  struct tm tm = *localtime(&t);
+  printf("%02d:%02d:%02d\n", tm.tm_hour, tm.tm_min, tm.tm_sec);
   
-   // clear input buffer
-   float z = x + y;
 
-   printf("%f\n", z);
-   fflush(stdin);
-   main();
+   
    
    printf("\nPress ENTER key to Continue");  
    getchar(); 
