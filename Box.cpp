@@ -32,6 +32,7 @@ int BoxMaker( int i)
 
 int main()
 {
+    ios_base::sync_with_stdio(false);
     int a;
     cout << "\n\nBox Maker \n\n";
     cin.sync();
