@@ -25,7 +25,7 @@ void clicker()
 		{
 			mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
 			mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
-			Sleep(1); //you can adjust the speed of the click here
+			Sleep(1);
 		}
 	}
 }		

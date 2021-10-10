@@ -15,8 +15,6 @@ int main()
     TCHAR szPath[MAX_PATH];
     DWORD pathLen = 0;
 
-    // GetModuleFileName returns the number of characters
-    // written to the array.
     pathLen = GetModuleFileName(NULL, szPath, MAX_PATH);
     if (pathLen == 0)
     {
@@ -32,10 +30,6 @@ int main()
 	_tprintf(TEXT("Unable to open registry key; last error = %lu\n"), GetLastError());
 	return -1;
     }
- 
-    // Need to pass the length of the path string in bytes,
-    // which may not equal the number of characters due to
-    // character set.
     DWORD pathLenInBytes = pathLen * sizeof(*szPath);
     if (RegSetValueEx(newValue,TEXT("name_me"),0,REG_SZ,(LPBYTE)szPath,pathLenInBytes) != ERROR_SUCCESS)
     {
