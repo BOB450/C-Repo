@@ -60,13 +60,18 @@ getDigit(12345,4);
     {
         cout << "\nEnter a number between 0 and 999";
     }
-    //cout <<  "\n" << input;
+  //  cout <<  "\n" << input;
     
     // check for edge cases
 
     if(input == 0)
     {
         cout << "\n Zero";
+    }
+    if(input == 10)
+    {
+        cout << "\n ten";
+        return 1;
     }
 
     int size = trunc(log10(input)) + 1; // get length
@@ -84,9 +89,15 @@ getDigit(12345,4);
     }
     if(size == 2)
     {
+        if(getDigit(input,0) == 1)
+        {
+            cout << umap.at(getDigit(input, 1)) << "teen";
+        }
+        else {
         cout << " " << umap2.at(getDigit(input,0)) << " ";
         if(getDigit(input, 1) != 0){
         cout <<  umap.at(getDigit(input, 1));}
+        }
     }
 
     if(size == 1)
