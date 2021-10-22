@@ -109,8 +109,8 @@ getDigit(12345,4);
     cout << " hundred" << " and ";
     if(getDigit(input,1) != 0){
     cout << " " << umap2.at(getDigit(input,1)) << " ";
-    }
-    cout << umap.at(getDigit(input, 2));
+    }else{
+    cout << umap.at(getDigit(input, 2));}
         }
     }
     if(size == 2)
