@@ -99,13 +99,19 @@ getDigit(12345,4);
     
     if(size == 3)
     {
+        if(getDigit(input,1) == 1)
+        {
+             cout <<  umap.at(getDigit(input, 0)) << " hundred " << "and ";
+            cout << umap.at(getDigit(input, 2)) << "teen";
+        }
+        else{
     cout <<  umap.at(getDigit(input, 0));
     cout << " hundred" << " and ";
     if(getDigit(input,1) != 0){
     cout << " " << umap2.at(getDigit(input,1)) << " ";
     }
     cout << umap.at(getDigit(input, 2));
-
+        }
     }
     if(size == 2)
     {
