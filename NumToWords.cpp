@@ -73,6 +73,26 @@ getDigit(12345,4);
         cout << "\n ten";
         return 1;
     }
+    if(input == 11)
+    {
+        cout << "\n eleven";
+        return 1;
+    }
+    if(input == 12)
+    {
+        cout << "\n twelve";
+        return 1;
+    }
+    if(input == 13)
+    {
+        cout << "\n thirteen";
+        return 1;
+    }
+    if(input == 15)
+    {
+        cout << "\n fifteen";
+        return 1;
+    }
 
     int size = trunc(log10(input)) + 1; // get length
 
